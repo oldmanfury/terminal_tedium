@@ -1,0 +1,74 @@
+#N canvas 642 45 1043 426 10;
+#X obj 126 43 noise~;
+#X obj 123 81 lop~ 100;
+#X obj 124 120 cos~;
+#X obj 134 154 clip~ -0.5 0.5;
+#X obj 188 346 dac~;
+#X obj 331 19 noise~;
+#X obj 266 69 expr~ pow($v1 \, 4000);
+#X obj 268 161 *~;
+#X obj 267 233 *~;
+#X obj 92 314 outlet~;
+#X obj 338 308 outlet~;
+#X obj 335 120 cnv 15 200 120 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 352 167 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 351 129 hsl 128 15 50 250 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 350 204 hsl 128 15 0 0.01 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 344 219 HISS;
+#X text 344 143 lo-pop;
+#X text 346 183 crackle;
+#X obj 567 285 *~ 1;
+#X obj 659 106 vsl 15 128 1 5 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 444 48 delwrite~ vibrato 50;
+#X obj 568 244 osc~ 2;
+#X obj 568 108 vsl 15 128 0.5 5 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 702 293 5 0 0 0 - - -, f 5;
+#X obj 702 268 +;
+#X obj 659 242 * 2;
+#X floatatom 610 222 5 0 0 0 - - -, f 5;
+#X text 687 175 <-- Depth (change the length of the delay line);
+#X text 574 77 <-- Speed (frequency of the LFO);
+#X obj 568 307 +~ 2;
+#X obj 567 337 delread4~ vibrato;
+#X obj 445 15 adc~;
+#X text 497 369 Pierre Massat \, GuitarExtended \, 2012;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 9 0;
+#X connect 3 0 4 1;
+#X connect 5 0 6 0;
+#X connect 5 0 8 1;
+#X connect 6 0 7 0;
+#X connect 7 0 4 1;
+#X connect 7 0 10 0;
+#X connect 7 0 4 0;
+#X connect 8 0 4 1;
+#X connect 8 0 4 0;
+#X connect 8 0 10 0;
+#X connect 8 0 9 0;
+#X connect 12 0 7 1;
+#X connect 13 0 1 1;
+#X connect 14 0 8 0;
+#X connect 18 0 29 0;
+#X connect 19 0 18 1;
+#X connect 19 0 24 1;
+#X connect 19 0 25 0;
+#X connect 21 0 18 0;
+#X connect 22 0 21 0;
+#X connect 22 0 26 0;
+#X connect 24 0 23 0;
+#X connect 25 0 24 0;
+#X connect 25 0 29 1;
+#X connect 29 0 30 0;
+#X connect 30 0 4 0;
+#X connect 30 0 4 1;
+#X connect 31 0 20 0;
+#X connect 31 1 20 0;

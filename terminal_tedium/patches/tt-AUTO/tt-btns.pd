@@ -1,0 +1,39 @@
+#N canvas 761 72 892 421 10;
+#X text 89 12 tact sw 0-2;
+#X obj 136 103 moses 1;
+#X obj 27 69 tedium_switch 23;
+#X obj 368 99 moses 1;
+#X obj 603 102 moses 1;
+#X obj 494 104 moses 1000;
+#X obj 259 65 tedium_switch 25;
+#X obj 494 68 tedium_switch 24;
+#X obj 16 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -99865 -99865
+-1;
+#X obj 45 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -99865 -1
+-1;
+#X obj 79 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1 -1
+;
+#X obj 137 216 outlet;
+#X obj 372 225 outlet;
+#X obj 604 230 outlet;
+#X obj 311 152 print OLED Q;
+#X obj 83 143 print OLED q;
+#X obj 259 101 moses 5000;
+#X text 316 170 shutdown;
+#X obj 27 105 moses 5000;
+#X text 92 169 restart patch loader;
+#X connect 1 0 11 0;
+#X connect 2 0 18 0;
+#X connect 2 1 1 0;
+#X connect 3 0 12 0;
+#X connect 4 0 13 0;
+#X connect 6 0 16 0;
+#X connect 6 1 3 0;
+#X connect 7 0 5 0;
+#X connect 7 1 4 0;
+#X connect 8 0 11 0;
+#X connect 9 0 12 0;
+#X connect 10 0 13 0;
+#X connect 16 1 14 0;
+#X connect 18 1 15 0;
+#X coords 0 -1 1 1 85 40 1 10 10;
